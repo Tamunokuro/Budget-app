@@ -1,13 +1,15 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: %i[show edit update destroy]
+  load_and_authorize_resource
 
   # GET /groups or /groups.json
   def index
-    @groups = Group.all
+    @groups = Group.all.where(user: current_user).includes(:payments)
   end
 
   # GET /groups/1 or /groups/1.json
-  def show; end
+  def show
+    @payments = current_user.payments
+  end
 
   # GET /groups/new
   def new
@@ -19,11 +21,17 @@ class GroupsController < ApplicationController
 
   # POST /groups or /groups.json
   def create
-    @group = Group.new(group_params)
+    unless current_user.present?
+      flash[:alert] = 'You must be logged in to create a group'
+      redirect_to new_user_session_path
+      return
+    end
+    @group = Group.new(group_params.merge(user: current_user))
+
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to group_url(@group), notice: 'Group was successfully created.' }
+        format.html { redirect_to groups_url, notice: 'Group was successfully created.' }
         format.json { render :show, status: :created, location: @group }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -47,6 +55,7 @@ class GroupsController < ApplicationController
 
   # DELETE /groups/1 or /groups/1.json
   def destroy
+    @group = Group.find(params[:id])
     @group.destroy
 
     respond_to do |format|
