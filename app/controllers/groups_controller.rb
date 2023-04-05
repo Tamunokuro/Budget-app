@@ -28,7 +28,6 @@ class GroupsController < ApplicationController
     end
     @group = Group.new(group_params.merge(user: current_user))
 
-
     respond_to do |format|
       if @group.save
         format.html { redirect_to groups_url, notice: 'Group was successfully created.' }
