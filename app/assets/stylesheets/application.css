@@ -37,6 +37,15 @@ body {
   font-weight: 900;
 }
 
+nav > *,
+.log-out {
+  color: #fff;
+}
+
+.log-out:hover {
+  color: #fff;
+}
+
 .account-form input {
   border: 2px solid #ccc;
   height: calc(2em + 0.75rem + 2px);
@@ -64,6 +73,14 @@ body {
   margin: 1rem;
   box-shadow: 0 0 0.5rem 0.1rem #ccc;
   list-style: none;
+}
+
+.group__payment__details {
+  padding: 0.5rem;
+  background-color: #fff;
+  margin: 1rem;
+  box-shadow: 0 0 0.5rem 0.1rem #ccc;
+  border-radius: 10px;
 }
 
 .group__items {
@@ -99,6 +116,14 @@ body {
   color: #fff;
 }
 
+.group__summary {
+  padding: 0.5rem;
+  background-color: #fff;
+  margin: 1rem;
+  box-shadow: 0 0 0.5rem 0.1rem #ccc;
+  border-radius: 10px;
+}
+
 .group__payment_summary {
   display: flex;
   justify-content: space-between;
@@ -115,3 +140,10 @@ body {
 .single__payment:last-child {
   margin-bottom: 5rem;
 }
+
+.messages {
+  animation: ease-in-out 2s linear;
+  z-index: 1;
+  position: relative;
+}
+
