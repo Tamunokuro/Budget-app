@@ -1,6 +1,6 @@
 <%= form_with(model: payment, url: group_payments_path) do |form| %>
   <% if payment.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger" role="alert">
       <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
 
       <ul>

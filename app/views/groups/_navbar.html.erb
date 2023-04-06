@@ -1,0 +1,5 @@
+<nav class="navbar bg-primary p-4 w-100">
+  <p class="signup_name"><%= current_user.name.capitalize %></p>
+  <h5>TRANSACTIONS</h5>
+  <%= button_to "Log out", destroy_user_session_path, :class => 'btn', :method => :delete, data: {turbo: false}%>
+</nav>

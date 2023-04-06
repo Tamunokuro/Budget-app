@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  load_and_authorize_resource
+  before_action :authenticate_user!
 
   # GET /groups or /groups.json
   def index
@@ -8,7 +8,7 @@ class GroupsController < ApplicationController
 
   # GET /groups/1 or /groups/1.json
   def show
-    @payments = current_user.payments
+    @groups = Group.find_by(id: params[:id])
   end
 
   # GET /groups/new

@@ -1,0 +1,21 @@
+<li class= "single__group__item">
+<%= link_to group_path(group.id), class: "single__group__item__link" do %>
+<div class="group__container">
+  <div class="group__items">
+    <div class="group__icon">
+      <img class="category-image" src="<%= group.icon %>" alt="Group Icon" width="120" height="150">
+    </div>
+    <div class="group__properties">
+      <div class="group__details">
+        <h4><%= group.name %></h4>
+        <p>$499</p>
+      </div>
+      <div class="group__utilities">
+        <h6>Created at: <span><%= group.created_at.strftime("%F") %></span></h6>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</li>
+

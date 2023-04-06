@@ -1,4 +1,6 @@
-<p style="color: green"><%= notice %></p>
+<% if flash.notice %>
+<p class="alert alert-primary mt-5" role="alert"><%= notice %></p>
+<% end %>
 
 <h1>Payments</h1>
 
