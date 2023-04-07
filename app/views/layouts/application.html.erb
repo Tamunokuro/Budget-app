@@ -7,15 +7,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <script src="https://kit.fontawesome.com/ecb44d8fff.js" crossorigin="anonymous"></script>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <div class="container">
-    <%= yield %>
-    <% if(user_signed_in?) %>
-    <%= button_to "Sign out", destroy_user_session_path, :class => 'btn btn-secondary', :method => :delete, data: {turbo: false}%>
+    <div class="container z-index-2 messages">
+    <% if flash.notice %>
+    <p class="alert alert-primary mt-5" role="alert"><%= notice %></p>
+    <% end %>
+    <% if flash.alert %>
+    <p class="alert alert-danger mt-5" role="alert"><%= alert %></p>
     <% end %>
     </div>
+    <%= yield %>
   </body>
 </html>
