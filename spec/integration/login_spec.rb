@@ -4,7 +4,6 @@ RSpec.describe 'Login', type: :system do
   before do
     user = User.new(name: 'Jamie', email: 'jamie@gmail.com', password: 'jamiepass',
                     password_confirmation: 'jamiepass')
-    user.skip_confirmation!
     user.save!
   end
 

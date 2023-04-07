@@ -3,7 +3,6 @@ require 'rails_helper'
 RSpec.describe 'Payment', type: :model do
   before do
     user = User.new(name: 'Jamie', email: 'jamie@gmail.com', password: 'jamiepass')
-    user.skip_confirmation!
     user.save!
     group = Group.new(name: 'Group 1', icon: 'group.png', user_id: user.id)
     group.save!

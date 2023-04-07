@@ -131,8 +131,12 @@ nav > *,
 }
 
 .category-image {
-  object-fit: cover;
-  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid #dcdcdc;
+  margin: 5px 0 5px 10px;
 }
 
 .single__payment {

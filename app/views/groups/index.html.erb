@@ -6,11 +6,11 @@
     <%= link_to group_path(group.id), class: "single__group__item__link" do %>
     <div class="group__container">
       <div class="group__items">
-        <div class="group__icon">
-          <img class="category-image" src="<%= group.icon %>" alt="Group Icon" width="120" height="150">
-        </div>
         <div class="group__properties">
           <div class="group__details">
+          <div class="group__icon">
+          <img class="category-image" src="<%= group.icon %>" alt="Group Icon" width="120" height="150">
+         </div>
             <h4><%= group.name %></h4>
             <p>$<%= group.payments.sum(:amount)%></p>
           </div>

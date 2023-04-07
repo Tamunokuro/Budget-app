@@ -5,10 +5,12 @@
              <div class="container">
               <div class="row">
                 <div class="col-12 col-lg-6 mx-auto">
-                            <h1 class="text-center header-logo">BUDGETLY</span></h1>
-                        <div class="text-center pt-5">
-                        <%= link_to "LOG IN", new_user_session_path, class: "btn btn-outline-primary py-2 mb-4 mt-2 fw-bold w-100" %>
-                        <%= link_to 'SIGN UP', new_user_registration_path, class: "btn btn-outline-primary py-2 mb-4 fw-bold w-100" %>
+                <div class="postion-relative">
+                        <div class="position-absolute top-50 start-50 translate-middle"><h1 class="text-center header-logo">BUDGETLY</h1></div> 
+                        <div class="position-absolute bottom-0 start-50 translate-middle-x">
+                        <%= link_to "LOG IN", new_user_session_path, class: "btn btn-primary py-2 mb-4 mt-2 fw-bold w-100" %>
+                        <%= link_to 'SIGN UP', new_user_registration_path, class: "btn py-2 mb-4 fw-bold w-100" %>
+                        </div>
                         </div>
                         </div>
                     </div>
