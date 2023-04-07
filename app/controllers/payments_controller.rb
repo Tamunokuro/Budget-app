@@ -7,9 +7,6 @@ class PaymentsController < ApplicationController
     @category_id = params[:group_id]
   end
 
-  # GET /payments/1 or /payments/1.json
-  def show; end
-
   # GET /payments/new
   def new
     @payment = Payment.new
@@ -17,9 +14,6 @@ class PaymentsController < ApplicationController
     @groups = Group.where(id: group_ids)
     @group_id = params[:group_id]
   end
-
-  # GET /payments/1/edit
-  def edit; end
 
   # POST /payments or /payments.json
   def create
@@ -29,23 +23,8 @@ class PaymentsController < ApplicationController
     respond_to do |format|
       if @payment.save
         format.html { redirect_to group_path(params[:group_id]), notice: 'Payment was successfully created.' }
-        format.json { render :show, status: :created, location: @payment }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @payment.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /payments/1 or /payments/1.json
-  def update
-    respond_to do |format|
-      if @payment.update(payment_params)
-        format.html { redirect_to payment_url(@payment), notice: 'Payment was successfully updated.' }
-        format.json { render :show, status: :ok, location: @payment }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @payment.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -61,11 +40,6 @@ class PaymentsController < ApplicationController
   end
 
   private
-
-  # Use callbacks to share common setup or constraints between actions.
-  def set_payment
-    @payment = Payment.find(params[:id])
-  end
 
   # Only allow a list of trusted parameters through.
   def payment_params
