@@ -15,7 +15,7 @@
             <p>$<%= group.payments.sum(:amount)%></p>
           </div>
           <div class="group__utilities">
-            <h6>Created at: <span><%= group.created_at.strftime("%F") %></span></h6>
+            <h6>Created at: <span><%= group.created_at.strftime("%d %B, %Y") %></span></h6>
           </div>
         </div>
       </div>

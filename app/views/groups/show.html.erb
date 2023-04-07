@@ -23,7 +23,7 @@
     <div class="group__properties">
       <h4><%= payment.name %></h4>
         <p>$<%= payment.amount %></p>
-        <p><%= payment.created_at.strftime("%F %R") %></p>
+        <p><%= payment.created_at.strftime("%d %B, %Y") %></p>
     </div>
   </div>
 <% end %>

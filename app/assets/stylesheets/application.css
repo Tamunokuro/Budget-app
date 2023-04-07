@@ -130,6 +130,11 @@ nav > *,
   padding: 0.5rem;
 }
 
+.category-image {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 .single__payment {
   padding: 0.5rem;
   background-color: #fff;
@@ -142,7 +147,6 @@ nav > *,
 }
 
 .messages {
-  animation: ease-in-out 2s linear;
   z-index: 1;
   position: relative;
 }
