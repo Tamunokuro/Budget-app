@@ -13,8 +13,8 @@ development:
   <<: *default
   database: RoR_Budget_App
   host: 127.0.0.1
-  username: postgres
-  password: 'Tamunokuro21$'
+  # username: postgres
+  # password: 'Tamunokuro21$'
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -23,8 +23,8 @@ test:
   <<: *default
   database: RoR_Budget_App_test
   host: 127.0.0.1
-  username: postgres
-  password: 'Tamunokuro21$'
+  # username: postgres
+  # password: 'Tamunokuro21$'
 
 
 production:
