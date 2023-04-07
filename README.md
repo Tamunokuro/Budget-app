@@ -70,14 +70,14 @@ After you're finished please remove all the comments and instructions!
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://getbootstrap.com/">React.js</a></li>
+    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Server</summary>
   <ul>
-    <li><a href="https://rubyonrails.org/">PostgreSQL</a></li>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
   </ul>
 </details>
 
@@ -103,9 +103,7 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://budgetly-app.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,7 +127,6 @@ Clone this repository to your desired folder:
 
 
 ```sh
-  cd my-folder
   git clone git@github.com:Tamunokuro/Budget-app.git
 ```
 
@@ -142,7 +139,7 @@ Install this project with:
 ```
 
 ```sh
-gem install
+bundle install
 ```
 
 ### Usage
@@ -183,11 +180,7 @@ You can deploy this project using: -->
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
 - [ ] **Desktop version**
-- [ ] **Edit budget**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -213,7 +206,7 @@ If you like this project please give it a ⭐️. Thanks!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank @Microverse for inspiring me to build this and  [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for this wonderful design
+I would like to thank Microverse for inspiring me to build this and  [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for this wonderful design
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -235,7 +228,7 @@ I would like to thank @Microverse for inspiring me to build this and  [Gregoire 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./MIT) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 _NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
