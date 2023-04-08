@@ -1,0 +1,25 @@
+<div class="container mt-5">
+<%= bootstrap_form_with(model: group) do |form| %>
+  <% if group.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <h2><%= pluralize(group.errors.count, "error") %> prohibited this group from being saved:</h2>
+      <ul>
+        <% group.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.text_field :icon %>
+  </div>
+
+  <div>
+    <%= form.submit 'Create Category', :class=>"btn btn-primary w-100" %>
+  </div>
+<% end %>
+</div>

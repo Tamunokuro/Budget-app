@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <script src="https://kit.fontawesome.com/ecb44d8fff.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <div class="container" id="messages">
+    <% if flash.notice %>
+    <p class="alert alert-primary mt-5" role="alert"><%= notice %></p>
+    <% end %>
+    <% if flash.alert %>
+    <p class="alert alert-danger mt-5" role="alert"><%= alert %></p>
+    <% end %>
+    </div>
+    <%= yield %>
+  </body>
+  <script>
+  $(document).ready(function(){
+    setTimeout(function(){
+    $('.alert').slideUp();
+    }, 5000);
+  })
+</script>
+</html>
